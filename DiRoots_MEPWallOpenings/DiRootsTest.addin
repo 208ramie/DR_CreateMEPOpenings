@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>DiRoots</Name>
+		<Assembly>DiRoots_MEPWallOpenings.dll</Assembly>
+		<AddInId>
+			77EC2932-7AA3-48E0-94D5-5E518B8F5835
+		</AddInId>
+		<FullClassName>DiRoots_MEPWallOpenings.ExternalApplication.ExternalApp</FullClassName>
+		<VendorId>Ramie</VendorId>
+	</AddIn>
+</RevitAddIns>
+

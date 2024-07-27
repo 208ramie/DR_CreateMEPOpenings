@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "DiRoots_MEPWallOpenings": {
+      "commandName": "Project"
+    },
+    "Revit": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Autodesk\\Revit 2025\\Revit.exe"
+    }
+  }
+}

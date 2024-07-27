@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="RevitAPI">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Revit 2025\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Revit 2025\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="4.5.3.3" />
+    <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DiRootsTest.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\LineJoiner32x32.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\LineJoiner.ico" />
+    <None Remove="Resources\LinesMerger32.ico" />
+    <None Remove="Resources\SingleLineMerger32.ico" />
+    <None Remove="Resources\Josn32.ico" />
+    <None Remove="Resources\Join32.ico" />
+    <None Remove="Resources\Dimension32.ico" />
+    <None Remove="Resources\DimensionRoom32.ico" />
+    <None Remove="Resources\Trash32.ico" />
+    <None Remove="Resources\JsonNew32.ico" />
+    <None Remove="Resources\DrawJsonLines32.ico" />
+    <None Remove="Resources\Doors32.ico" />
+    <None Remove="Resources\RoomSections32.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\CreateDuctOpenings.ico" />
+    <Resource Include="Resources\CreateDuctOpenings.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y /E /R &quot;$(TargetDir)&quot;&quot;.&quot; &quot;$(AppData)\Autodesk\Revit\Addins\2025\&quot;" />
+  </Target>
+
+</Project>
