@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\DuctOpening2.ico" />
     <None Remove="Resources\LineJoiner32x32.bmp" />
   </ItemGroup>
 
@@ -50,6 +51,7 @@
 
   <ItemGroup>
     <None Remove="Resources\CreateDuctOpenings.ico" />
+    <Resource Include="Resources\DuctOpening2.ico" />
     <Resource Include="Resources\CreateDuctOpenings.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

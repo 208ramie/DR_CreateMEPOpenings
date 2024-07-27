@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:DiRoots_MEPWallOpenings.Views"
         xmlns:viewModels="clr-namespace:DiRoots_MEPWallOpenings.ViewModels"
         mc:Ignorable="d"
-        Title="CreateMEPOpeningsView" Height="230" Width="250">
+        Title="CreateMEPOpeningsView" 
+        Height="230" Width="250"
+        ResizeMode="NoResize"
+        Topmost="True">
 
 
     <!--Define the Window DataContext-->
@@ -72,7 +75,8 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Height="20"
-                Text="{Binding MinDisatnceInmm, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                Text="{Binding MinDisatnceInmm, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                IsEnabled="{Binding MergeOpenings, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
             <TextBlock
                 Name="UntisMinDistanceTextBlock"
                 Grid.Row="1"
